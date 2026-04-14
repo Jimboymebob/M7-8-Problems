@@ -2,9 +2,11 @@ start = int(input("Enter start value: "))
 stop = int(input("Enter stop value: "))
 increment = int(input("Enter increment value: "))
 
-current = start
+if increment == 0:
+    increment = 1 
 
-while current <= stop:
-    print(current)
-    current += increment
-  
+i = start
+
+while (increment > 0 and i <= stop) or (increment < 0 and i >= stop):
+    print(i)
+    i += increment
